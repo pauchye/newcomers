@@ -1,9 +1,9 @@
 import '@/app/ui/global.css';
-import { inter } from '@/app/ui/fonts';
+import { poppins } from '@/app/ui/fonts';
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
-  title: 'Acme Dashboard',
+  title: 'Wiltonians, Newcomers and Neighbors',
   description: 'The official Next.js Course Dashboard, built with App Router.',
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 }
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${poppins.className} antialiased`}>{children}</body>
     </html>
   );
 }

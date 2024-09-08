@@ -1,64 +1,49 @@
 import {
-  BanknotesIcon,
-  ClockIcon,
-  UserGroupIcon,
-  InboxIcon,
+  SpeakerWaveIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/outline';
-import { lusitana } from '@/app/ui/fonts';
-import { fetchCardData } from '@/app/lib/data';
+import { poppins } from '@/app/ui/fonts';
 
 const iconMap = {
-  collected: BanknotesIcon,
-  customers: UserGroupIcon,
-  pending: ClockIcon,
-  invoices: InboxIcon,
+  anouncement: SpeakerWaveIcon,
 };
 
 export default async function CardWrapper() {
-  const {
-    numberOfInvoices,
-    numberOfCustomers,
-    totalPaidInvoices,
-    totalPendingInvoices,
-  } = await fetchCardData();
   return (
     <>
-      {/* NOTE: Uncomment this code in Chapter 9 */}
-
-      <Card title="Collected" value={totalPaidInvoices} type="collected" />
-      <Card title="Pending" value={totalPendingInvoices} type="pending" />
-      <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
-      <Card
-        title="Total Customers"
-        value={numberOfCustomers}
-        type="customers"
-      />
+      <Card title="Anouncement"  type="anouncement" />
     </>
   );
 }
 
 export function Card({
   title,
-  value,
   type,
 }: {
   title: string;
-  value: number | string;
-  type: 'invoices' | 'customers' | 'pending' | 'collected';
+  type: 'anouncement';
 }) {
   const Icon = iconMap[type];
 
   return (
     <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
-      <div className="flex p-4">
-        {Icon ? <Icon className="h-5 w-5 text-gray-700" /> : null}
-        <h3 className="ml-2 text-sm font-medium">{title}</h3>
+      <div className="flex p-4 ">
+        {Icon ? <Icon className="h-5 w-5 text-black" /> : null}
+        <h3 className="ml-2 text-sm font-bold">{title}</h3>
       </div>
       <p
-        className={`${lusitana.className}
-          truncate rounded-xl bg-white px-4 py-8 text-center text-2xl`}
+        className={`${poppins.className}
+          truncate rounded-xl bg-white px-4 py-8 text-center `}
       >
-        {value}
+Please join us for the <b>Newcomers Revival Happy Hour</b>!<br/> 
+Sat, September 28, 2024 06:00 PM - 08:00 PM <br/>
+276 Ridgefield Rd, Wilton, CT 06897, USA
+<a
+            href="https://www.zeffy.com/en-US/ticketing/238d084e-5b32-4ddc-9128-9193e0254d77"
+            className="flex items-center self-start rounded-lg bg-wiltonBlue-100 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base mt-2"
+          >
+            <span>Register</span> <ArrowRightIcon className="w-5 md:w-6" />
+          </a>
       </p>
     </div>
   );
