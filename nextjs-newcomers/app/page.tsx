@@ -35,10 +35,10 @@ export default function Page() {
                 <Link
             // href="/login"
             // href="/dashboard"
-            href="https://www.zeffy.com/en-US/ticketing/238d084e-5b32-4ddc-9128-9193e0254d77"
+            href="https://venmo.com/u/wiltonians"
             className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
-            <span>Register for the event</span> <ArrowRightIcon className="w-5 md:w-6" />
+            <span>Register for $25 per ticket</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
         </div>
         <div className="flex flex-col gap-6 rounded-lg bg-gray-50 p-6 md:w-2/5 md:px-20">
@@ -68,7 +68,7 @@ export default function Page() {
 <b>Social Events</b>
 <ul className="my-2">
 <li>
-- <a href="https://www.zeffy.com/en-US/ticketing/238d084e-5b32-4ddc-9128-9193e0254d77">Fall Revival Event 9/28</a>
+- <a href="https://venmo.com/u/wiltonians" className="hover:underline text-blue-600">Fall Revival Event 9/28</a>
 </li>
 </ul>
 </li>
