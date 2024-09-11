@@ -10,10 +10,22 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
       <div className="flex h-20 rounded-lg bg-wiltonBlue-100 p-4 md:h-52 flex flex-col gap-4 md:flex-row">
-        <WiltonLogo />
+        {/* <WiltonLogo /> */}
         <div 
         className="flex items-center justify-center text-white grow md:text-3xl"
-        >Wiltonians, Newcomers and Neighbors</div>
+        >
+              <div
+      className={`justify-center rounded-lg hidden md:block items-center justify-center p-1`}
+    >
+      <Image
+        src="/logos/Logo3600X1000.jpg"
+        width={720}
+        height={200}
+        className="block rounded-lg"
+        alt="Screenshots of the dashboard project showing desktop version"
+      />
+    </div>
+          </div>
       </div>
       <div className=" rounded-lg bg-gray-50 p-6 mt-4">
             <p >
@@ -26,7 +38,7 @@ export default function Page() {
       <div className="mt-4 flex grow justify-start items-start flex-col gap-4 md:flex-row">
       <div className="flex flex-col  justify-center items-center rounded-lg md:w-3/5 items-start md:px-28 ">
           <Image
-        src="/images/event.jpg"
+        src="/images/eventNew.jpg"
         width={1000}
         height={1000}
         className="md:block rounded-lg"
