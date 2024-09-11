@@ -38,7 +38,7 @@ export default function Page() {
       <div className="mt-4 flex grow justify-start items-start flex-col gap-4 md:flex-row">
       <div className="flex flex-col  justify-center items-center rounded-lg md:w-3/5 items-start md:px-28 ">
           <Image
-        src="/images/eventNew.jpg"
+        src="/images/eventNewest.jpg"
         width={1000}
         height={1000}
         className="md:block rounded-lg"
