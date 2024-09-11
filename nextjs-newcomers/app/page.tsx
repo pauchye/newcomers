@@ -35,11 +35,19 @@ export default function Page() {
                 <Link
             // href="/login"
             // href="/dashboard"
-            href="https://venmo.com/u/wiltonians"
+            href="https://forms.gle/aDQPoj9K33tzRWs8A"
             className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
-            <span>Register for $25 per ticket</span> <ArrowRightIcon className="w-5 md:w-6" />
+            <span>RSVP </span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
+          <div>
+          <b>browngrotta arts</b> is an internationally known gallery that promotes contemporary art textiles. In its art barn in Wilton, the gallery hosts two exhibitions each year that are open to the public just 10 days each. The gallery will be highlighting <b>Ways of Seeing</b>, how people envision and curate art collections.
+          <br/>
+<Link href='https://browngrotta.com/exhibitions' className="hover:underline text-blue-600 my-2">
+https://browngrotta.com/exhibitions </Link>   <br/>
+Ways of Seeing is sponsored by <b>Litchfield Distillery</b>.
+
+          </div>
         </div>
         <div className="flex flex-col gap-6 rounded-lg bg-gray-50 p-6 md:w-2/5 md:px-20">
         <b>
@@ -68,7 +76,7 @@ export default function Page() {
 <b>Social Events</b>
 <ul className="my-2">
 <li>
-- <a href="https://venmo.com/u/wiltonians" className="hover:underline text-blue-600">Fall Revival Event 9/28</a>
+- <a href="https://forms.gle/aDQPoj9K33tzRWs8A" className="hover:underline text-blue-600">Fall Revival Event 9/28</a>
 </li>
 </ul>
 </li>
