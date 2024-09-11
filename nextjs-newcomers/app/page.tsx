@@ -67,7 +67,7 @@ Ways of Seeing is sponsored by <b>Litchfield Distillery</b>.
         </b>
 <ul>
   <li>
-  <b >Supporting Our Neighbors</b>
+  <b >Supporting Newcomers</b>
   <ul className="my-2">
   <li>
     - Welcome Wagon 
@@ -103,7 +103,7 @@ Ways of Seeing is sponsored by <b>Litchfield Distillery</b>.
 - Running Club 
 </li>
 <li>
-- Working Women&#093;s Group
+- Working Women&#039;s Group
 </li>
 </ul>
 </li>
@@ -115,10 +115,10 @@ Ways of Seeing is sponsored by <b>Litchfield Distillery</b>.
 - Arts & Crafts Gatherings 
 </li>
 <li>
-- Dads & Donuts / Men&#093;s Happy Hour 
+- Dads & Donuts / Men&#039;s Happy Hour 
 </li>
 <li>
-- Mom&#093;s Happy Hour
+- Mom&#039;s Happy Hour
 </li>
 <li>
 - Popsicles in the Park 
