@@ -1,37 +1,24 @@
-import CardWrapper from '@/app/ui/dashboard/cards';
-import RevenueChart from '@/app/ui/dashboard/revenue-chart';
-import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
-import { poppins } from '@/app/ui/fonts';
-import { Suspense } from 'react';
-import { RevenueChartSkeleton,
-   CardsSkeleton,
-   LatestInvoicesSkeleton } from '@/app/ui/skeletons';
+import Slider from '@/app/ui/dashboard/slider';
+import { Dropdown } from "flowbite-react";
+import Link from 'next/link';
  
 export default async function Page() {
 
   return (
-    <main>
-      <h1 className={`${poppins.className} mb-4 text-xl md:text-2xl`}>
-        Dashboard (Work in process...)
-      </h1>
-      <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
-      <Suspense fallback={<CardsSkeleton />}>
-          <CardWrapper />
-        </Suspense>
-        <div>
-        A little history about the Newcomers Club: The Wilton Newcomers Club was originally founded in 1965 as a 501c7 organization. In 2018, it was rebranded to <b>Wilton, Newcomers and Neighbors</b> to welcome not only newcomers but also long-time Wiltonians and neighbors from surrounding towns. The 501c7 chapter was closed shortly after. In 2021, this Facebook group was established in hopes to keep the group alive.<br/>
-        We are working to revive the club and re- establish ourselves as a 501c7 social organization (collect dues, host social events and community building events etc).
-        </div>
-        </div>
-      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
-      <Suspense fallback={<RevenueChartSkeleton />}>
-          <RevenueChart />
-        </Suspense>
-        <Suspense fallback={<LatestInvoicesSkeleton />}>
-        <LatestInvoices />
-        </Suspense>
-
-      </div>
+    <main className="h-full ">
+        <Slider />
+        <div className="absolute bottom-0 right-0 m-4 p-4">
+        <Dropdown size="lg" label="Stay in touch..." placement="top" theme={{ floating: { target: "bg-wiltonBlue-100 transition-colors hover:bg-blue-400" } }}>
+          <div className="flex flex-col  items-center m-4 p-4" >
+      <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Get in touch
+      </h3>
+      <img src="/images/QR_Reg.jpeg" alt="..." />
+<hr className='my-2'/>
+      <Link className="flex items-center gap-5 rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base" href='https://docs.google.com/forms/d/e/1FAIpQLSchDZn7vOO1F84MMZCPnkLa04w_0_S5EwuGZwHZV98I35hFGg/viewform'>
+        Register
+      </Link></div>
+    </Dropdown></div>
     </main>
   );
 }

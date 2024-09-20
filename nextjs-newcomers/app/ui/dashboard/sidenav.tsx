@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavLinks from '@/app/ui/dashboard/nav-links';
+// import NavLinks from '@/app/ui/dashboard/nav-links';
 import AcmeLogo from '@/app/ui/wilton-logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
 // import { signOut } from '@/auth';
@@ -17,8 +17,79 @@ export default function SideNav() {
         </div>
       </Link>
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
-        <NavLinks />
-        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
+        {/* <NavLinks /> */}
+        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block">
+        <ul>
+  <li>
+  <b >Supporting Newcomers</b>
+  <ul className="my-2">
+  <li>
+    - Welcome Wagon 
+  </li></ul>
+
+</li>
+<li>
+<b>Supporting Our Neighbors</b>
+<ul className="my-2">
+<li>
+- Referral Directory
+</li>
+<li>
+- Community events
+</li></ul>
+</li>
+<li>
+<b>Social Events</b>
+<ul className="my-2">
+<li>
+- <a href="https://forms.gle/aDQPoj9K33tzRWs8A" className="hover:underline text-blue-600">Fall Revival Event 9/28</a>
+</li>
+</ul>
+</li>
+<li>
+<b>Ongoing Gatherings 
+</b>
+<ul className="my-2">
+<li>
+- Supper Club
+</li>
+<li>
+- Running Club 
+</li>
+<li>
+- Working Women&#039;s Group
+</li>
+</ul>
+</li>
+<li>
+<b>And many more... 
+</b>
+<ul className="my-2">
+<li>
+- Arts & Crafts Gatherings 
+</li>
+<li>
+- Dads & Donuts / Men&#039;s Happy Hour 
+</li>
+<li>
+- Mom&#039;s Happy Hour
+</li>
+<li>
+- Popsicles in the Park 
+</li>
+<li>
+- Newcomers First Year Happy Hour
+</li>
+<li>
+- Tennis meet ups
+</li>
+<li>
+- Touch-a-Truck Event / Meet our Hometown Heroes
+</li>
+</ul>
+</li>
+</ul>
+        </div>
         {/* <form           action={async () => {
             // 'use server';
             // await signOut();
