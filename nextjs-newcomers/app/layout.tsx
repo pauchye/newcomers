@@ -4,7 +4,7 @@ import { Metadata } from 'next';
  
 export const metadata: Metadata = {
   title: 'Wiltonians, Newcomers and Neighbors',
-  description: 'The official Next.js Course Dashboard, built with App Router.',
+  description: 'Wiltonians, Newcomers and Neighbors.',
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 }
 export default function RootLayout({
