@@ -3,7 +3,7 @@ import { Carousel } from "flowbite-react";
 export default function Slider() {
     return(
 <div className="h-full ">
-<Carousel slideInterval={2000} pauseOnHover>
+<Carousel slideInterval={4000} pauseOnHover>
   <img src="/images/Slider/slide1.jpg" alt="..." />
   <img src="/images/Slider/slide2.jpg" alt="..." />
   <img src="/images/Slider/slide3.jpg" alt="..." />
