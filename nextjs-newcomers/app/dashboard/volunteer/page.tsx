@@ -32,7 +32,7 @@ export default async function Page({
       </div>
        <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
         <Table 
-        // query={query} currentPage={currentPage} 
+        query={query} currentPage={currentPage} past={false}
         />
       </Suspense>
       <div className="mt-5 flex w-full justify-center">

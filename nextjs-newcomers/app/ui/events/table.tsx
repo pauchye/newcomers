@@ -21,7 +21,9 @@ export default async function EventsTable(
   past: boolean;
 }
 ) {
-
+console.log(query,
+  currentPage,
+  past,)
   const [openModal, setOpenModal] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState();
 

@@ -1,14 +1,19 @@
 // import WiltonLogo from '@/app/ui/wilton-logo';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+'use client'
+// import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { useState } from 'react'
 import Link from 'next/link';
 // import styles from '@/app/ui/home.module.css';
 // import { poppins } from '@/app/ui/fonts';
 import Image from 'next/image';
 import CustomFooter from '@/app/ui/footer';
+import { PromoModal } from '@/app/ui/promoModal'
 
 export default function Page() {
+  const [ openPromo, setOpenPromo ] = useState(false)
   return (
     <main className="flex min-h-screen flex-col p-6">
+{openPromo && <PromoModal onClose={() => setOpenPromo(false)}/>}
       <div className="flex h-20 rounded-lg bg-wiltonBlue-100 p-4 md:h-52 flex flex-col gap-4 md:flex-row">
         {/* <WiltonLogo /> */}
         <div 
@@ -38,20 +43,28 @@ export default function Page() {
       <div className="mt-4 flex grow justify-start items-start flex-col gap-4 md:flex-row">
       <div className="flex flex-col  justify-center items-center rounded-lg md:w-3/5 items-start md:px-28 ">
           <Image
-        src="/images/eventNewest.jpg"
+        src="/images/eventSold.jpg"
         width={1000}
         height={1000}
         className="md:block rounded-lg"
         alt="Screenshots of the dashboard project showing desktop version"
       />
-                <Link
+      <div className='flex flex-col md:gap-4 md:flex-row'>
+                <div
             // href="/login"
             // href="/dashboard"
-            href="https://forms.gle/aDQPoj9K33tzRWs8A"
-            className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+            className="flex items-center gap-5 self-start rounded-lg bg-gray-300 px-6 my-4 py-3 text-sm font-medium text-white transition-colors  md:text-base"
           >
-            <span>RSVP </span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+            <span>This event is sold out </span>
+          </div>
+          <div
+          onClick={() => setOpenPromo(true)}
+            // href="/login"
+            // href="/dashboard"
+            className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors  md:text-base hover:bg-blue-400"
+          >
+            <span>Check our next event! </span>
+          </div></div>
           <div>
           <b>browngrotta arts</b> is an internationally known gallery that promotes contemporary art textiles. In its art barn in Wilton, the gallery hosts two exhibitions each year that are open to the public just 10 days each. The gallery will be highlighting <b>Ways of Seeing</b>, how people envision and curate art collections.
           <br/>
