@@ -3,70 +3,66 @@
 // import InvoiceStatus from '@/app/ui/events/status';
 // import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
 // import { fetchFilteredInvoices } from '@/app/lib/data';
+'use client'
+import Link from 'next/link';
+import { useState, useCallback } from "react";
+import { events } from '@/app/lib/placeholder-data';
+import { EventModal } from './modal';
+const CURDATE = Date.now()
 
-export default async function InvoicesTable(
-//   {
-//   query,
-//   currentPage,
-// }: {
-//   query: string;
-//   currentPage: number;
-// }
+export default async function EventsTable(
+  {
+  query,
+  currentPage,
+  past,
+}: {
+  query: string;
+  currentPage: number;
+  past: boolean;
+}
 ) {
-  // const invoices = await fetchFilteredInvoices(query, currentPage);
-  const events = [
-    {
-      id: 0,
-      name: 'Lunch',
-      date: '06-10-2024',
-      address: 'TBD',
-      cost: 'free'
-    },    {
-      id: 1,
-      name: 'Morning run',
-      date: '06-09-2024',
-      address: 'NRVT',
-      cost: 'free'
-    },    {
-      id: 3,
-      name: 'Dinner',
-      date: '01-10-2024',
-      address: 'TBD',
-      cost: '$50'
-    },    {
-      id: 4,
-      name: 'Volunteering',
-      date: '06-10-2024',
-      address: 'TBD',
-      cost: 'free'
-    },
 
-  ]
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState();
+
+  const tableEvents = events.filter((event: any) => Date.parse(event.date) > CURDATE)
+
+  const handleToggleModal = useCallback((event?: any) => {
+    if (event) {
+      setSelectedEvent(event)
+      setOpenModal(true)
+    } else {
+      setSelectedEvent(undefined)
+      setOpenModal(false)
+    }
+
+  }, [setSelectedEvent, setOpenModal])
 
   return (
     <div className="mt-6 flow-root">
+      {openModal && selectedEvent && <EventModal event={selectedEvent} onClose={() => handleToggleModal()}/> }
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
           <div className="md:hidden">
-            {events?.map((event) => (
+            {tableEvents?.map((event) => (
               <div
-                key={event.id}
+                key={event.eventId}
                 className="mb-2 w-full rounded-md bg-white p-4"
               >
                 <div className="flex items-center justify-between border-b pb-4">
                   <div>
-                    <div className="mb-2 flex items-center">
-                      <p>{event.name}</p>
+                    <div className="mb-2 flex items-center text-xl font-medium">
+                      <button onClick={() => handleToggleModal(event)}>{event.name}</button>
                     </div>
-                    <p className="text-sm text-gray-500">{event.cost}</p>
+                    <p className="text-sm text-gray-500">{`Cost: $${event.cost}`}</p>
                   </div>
                 </div>
                 <div className="flex w-full items-center justify-between pt-4">
                   <div>
-                    <p className="text-xl font-medium">
-                    {event.date}
+                    <p className="mb-2">
+                    {`${event.date} at ${event.time}`}
                     </p>
-                    <p>{event.address}</p>
+                    <Link className='hover:underline text-blue-600' href={event.locationUrl}>{event.address}</Link>
                   </div>
                 </div>
               </div>
@@ -86,24 +82,28 @@ Location              </th>
                 <th scope="col" className="px-3 py-5 font-medium">
                   Date
                 </th>
-                {/* <th scope="col" className="relative py-3 pl-6 pr-3">
-                  <span className="sr-only">Edit</span>
-                </th> */}
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Time
+                </th>
               </tr>
+
+              
+ 
             </thead>
             <tbody className="bg-white">
-              {events?.map((event) => (
+              {tableEvents?.map((event) => (
                 <tr
-                  key={event.id}
+                  key={event.eventId}
                   className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
                 >
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex items-center gap-3">
-                      <p>{event.name}</p>
+                      <button onClick={() => handleToggleModal(event)}>{event.name}</button>
                     </div>
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    {event.address}
+                    <Link href={event.locationUrl} className="hover:underline text-blue-600">
+                    {event.address}</Link>
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
                     {event.cost}
@@ -111,12 +111,9 @@ Location              </th>
                   <td className="whitespace-nowrap px-3 py-3">
                     {event.date}
                   </td>
-                  {/* <td className="whitespace-nowrap py-3 pl-6 pr-3">
-                    <div className="flex justify-end gap-3">
-                      <UpdateInvoice id={invoice.id} />
-                      <DeleteInvoice id={invoice.id} />
-                    </div>
-                  </td> */}
+                  <td className="whitespace-nowrap px-3 py-3">
+                    {event.time}
+                  </td>
                 </tr>
               ))}
             </tbody>

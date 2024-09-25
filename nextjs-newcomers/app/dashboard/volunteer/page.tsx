@@ -1,6 +1,6 @@
 import Pagination from '@/app/ui/events/pagination';
 import Search from '@/app/ui/search';
-import EventsTable from '@/app/ui/events/table';
+import Table from '@/app/ui/events/table';
 // import { CreateInvoice } from '@/app/ui/events/buttons';
 import { poppins } from '@/app/ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
@@ -27,12 +27,12 @@ export default async function Page({
         <h1 className={`${poppins.className} text-2xl`}>Events</h1>
       </div>
       <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
-        <Search placeholder="Search events..." />
+        <Search placeholder="[WIP] Search events..." />
         {/* <CreateInvoice /> */}
       </div>
        <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
-        <EventsTable 
-        query={query} currentPage={currentPage} past={false}
+        <Table 
+        // query={query} currentPage={currentPage} 
         />
       </Suspense>
       <div className="mt-5 flex w-full justify-center">

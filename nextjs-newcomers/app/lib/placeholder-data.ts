@@ -1,4 +1,7 @@
 // This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
+
+import { freemem } from "os";
+
 // https://nextjs.org/learn/dashboard-app/fetching-data
 const users = [
   {
@@ -144,4 +147,59 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
-export { users, customers, invoices, revenue };
+const events = [
+  {
+    eventId: 0,
+    date: '2024-09-21',
+    timeStart: '11am',
+    duration: 60, //minutes
+    recurring: false,
+    cost: 0,
+    regUrl: 'string',
+    address: '137 Old Ridgefield Rd, Wilton, CT 06897',
+    venueName: 'Wilton Library',
+    locationUrl: 'https://g.co/kgs/tUkZ8Vs',
+    name: 'Volunteer fair',
+    label: ['all'] // target audience
+  },
+  {
+    eventId: 1,
+    date: '2024-09-28',
+    time: '6pm',
+    recurring: false,
+    cost: 25, //dollars
+    regUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScyVPaF_vI_ab9ODZhaipwuyRgw66Yzfu4f7OYzz7qR0Bxt5Q/viewform',
+    address: '276 Ridgefield Rd, Wilton, CT 06897, USA',
+    venueName: 'browngrotta arts',
+    locationUrl: 'https://maps.app.goo.gl/VrQGRyzRmRfXKdkf8',
+    name: 'Revival Happy Hour',
+    label: ['21+'] // target audience
+  },
+  {
+    eventId: 2,
+    date: '2024-10-11',
+    time: 'TBD',
+    recurring: false,
+    cost: 0,
+    regUrl: 'string',
+    volunteerId: 0,
+    address: '137 Old Ridgefield Rd, Wilton, CT 06897',
+    venueName: 'Wilton Library',
+    locationUrl: 'https://g.co/kgs/tUkZ8Vs',
+    name: 'Build a scarecrow',
+    label: ['kids'] // target audience
+  },
+]
+
+const volunteering = [
+  {
+    volunteerId: 0,
+    volRegUrl: 'string',
+    eventId: 0,
+    volunteeringType: 'string', // running, craft
+    volunteerName: 'Scarecrow building',
+    age: '12+'
+  }
+]
+
+export { users, customers, invoices, revenue, events, volunteering };
