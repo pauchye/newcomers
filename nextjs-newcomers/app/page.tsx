@@ -101,7 +101,7 @@ Ways of Seeing is sponsored by <b>Litchfield Distillery</b>.
 <b>Social Events</b>
 <ul className="my-2">
 <li>
-- <a href="https://forms.gle/aDQPoj9K33tzRWs8A" className="hover:underline text-blue-600">Fall Revival Event 9/28</a>
+- <div>Fall Revival Event 9/28</div>
 </li>
 </ul>
 </li>
