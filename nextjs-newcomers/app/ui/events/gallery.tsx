@@ -12,6 +12,7 @@ const GalleryPage = ({ eventName }: {eventName: string}) => {
         if (data && data[eventName]){
           setImageGallery(data[eventName])  
         };
+        console.log('data', data)
   }
 getPictures()
     }, [setImageGallery])
