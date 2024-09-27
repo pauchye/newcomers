@@ -4,7 +4,7 @@
 // import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 import { events } from '@/app/lib/placeholder-data';
-import GalleryPage from '@/app/lib/gallery'
+import GalleryPage from '@/app/ui/events/gallery'
 
 export default async function Page({ params }: { params: { id: string } }) {
   const selectedEvents = events.filter((event: any) => {
