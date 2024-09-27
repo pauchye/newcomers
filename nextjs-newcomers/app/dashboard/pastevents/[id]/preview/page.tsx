@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       }
       const selectedEvent = selectedEvents[0]
   return (
-    <main>
+    <main>{selectedEvent &&
 <div> 
   <div className={`text-xl text-gray-800 md:text-2xl md:leading-normal my-4 antialiased`}>{selectedEvent.name}</div>
                     <p>
@@ -29,6 +29,8 @@ export default async function Page({ params }: { params: { id: string } }) {
 {selectedEvent.imageName && <GalleryPage eventName={selectedEvent.imageName}/>}
             </div>
           </div>
+      }
+
     </main>
   );
 }
