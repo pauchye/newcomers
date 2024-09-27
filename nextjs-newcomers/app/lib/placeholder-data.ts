@@ -180,7 +180,7 @@ const events = [
     name: 'Revival Happy Hour',
     label: ['21+'], // target audience
     registerUrl: '#',
-    canVolunteer: true,
+    canVolunteer: false,
     volunteerUrl: '#',
     imageName: 'happyhour',
     isSoldOut: false,
@@ -200,7 +200,7 @@ const events = [
     name: 'Build a scarecrow',
     label: ['kids'], // target audience
     registerUrl: '#',
-    canVolunteer: true,
+    canVolunteer: false,
     volunteerUrl: '#',
     imageName: 'scarecrow',
     isSoldOut: false,
