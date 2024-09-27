@@ -14,7 +14,7 @@ const GalleryPage = ({ eventName }: {eventName: string}) => {
         };
   }
 getPictures()
-    }, [])
+    }, [setImageGallery])
     return <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 my-6">
         {imageGallery && imageGallery.map((el: string) => <Image  width={400} height={400} alt={'alt'} src={`/images/events/${eventName}/${el}`} key={el} />)}
     </div>
