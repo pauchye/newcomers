@@ -1,27 +1,28 @@
 'use server'
-import { promises as fs } from 'fs'
-import path from 'path'
-// import React from 'react';
+import * as fs from 'fs'
 import Image from 'next/image'
 
-// const { container, main, title, grid, card } = styles
+const galleryFilenames: string[] = fs.readdirSync(`./public/images/events/`)
+const GALLERY_MAP: Record<string, string[]> = {}
 
-// using process.cwd() to get the path
-// fs.readdir to get all files in directory
+galleryFilenames.forEach(item => {
+    if (fs.lstatSync(`./public/images/events/${item}`).isDirectory() ) {
+        GALLERY_MAP[item] = fs.readdirSync(`./public/images/events/${item}`)
+    }
+})
+
 const GalleryPage = async ({ eventName }: {eventName: string}) => {
-    const imageDirectory = path.join(process.cwd(), `/public/images/events/${eventName}`);
-    const imageFilenames = await fs.readdir(imageDirectory)
-
     return (
             <div className='my-6'>             
-                <Gallery images={imageFilenames} eventName={eventName}/>
+                <Gallery  eventName={eventName}/>
             </div>
     );
 };
 
-const Gallery = ({ images, eventName }: { images: Array<string>; eventName: string }) => {
+const Gallery = ({ eventName }: { eventName: string }) => {
+    const imageArray = GALLERY_MAP[eventName]
     return <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
-        {images.map((el: string) => <Image  width={400} height={400} alt={'alt'} src={`/images/events/${eventName}/${el}`} key={el} />)}
+        {imageArray && imageArray.map((el: string) => <Image  width={400} height={400} alt={'alt'} src={`/images/events/${eventName}/${el}`} key={el} />)}
     </div>
 }
 
