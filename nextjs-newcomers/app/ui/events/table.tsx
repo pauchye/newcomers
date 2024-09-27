@@ -5,10 +5,20 @@
 // import { fetchFilteredInvoices } from '@/app/lib/data';
 'use client'
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState, useCallback } from "react";
 import { events } from '@/app/lib/placeholder-data';
 import { EventModal } from './modal';
+
 const CURDATE = Date.now()
+
+type SelectedEventType = {
+registerUrl?: string;
+canVolunteer: boolean;
+volunteerUrl?: string;
+imageName: string;
+isSoldOut: boolean;
+}
 
 export default async function EventsTable(
   {
@@ -25,24 +35,37 @@ console.log(query,
   currentPage,
   past,)
   const [openModal, setOpenModal] = useState(false);
-  const [selectedEvent, setSelectedEvent] = useState();
-
-  const tableEvents = events.filter((event: any) => Date.parse(event.date) > CURDATE)
+  
+  const [selectedEvent, setSelectedEvent] = useState<SelectedEventType | undefined>();
+  const router = useRouter();
+  const tableEvents = events.filter((event: any) => past? Date.parse(event.date) < CURDATE : Date.parse(event.date) >= CURDATE)
 
   const handleToggleModal = useCallback((event?: any) => {
     if (event) {
-      setSelectedEvent(event)
-      setOpenModal(true)
+      if (past) {
+        router.push(`/dashboard/pastevents/${event.eventId}/preview`)
+      } else {
+        setSelectedEvent(event)
+        setOpenModal(true)
+      }
     } else {
       setSelectedEvent(undefined)
       setOpenModal(false)
-    }
-
-  }, [setSelectedEvent, setOpenModal])
+    }  
+  }, [setSelectedEvent, setOpenModal, past, router])
 
   return (
     <div className="mt-6 flow-root">
-      {openModal && selectedEvent && <EventModal event={selectedEvent} onClose={() => handleToggleModal()}/> }
+      {openModal && selectedEvent && 
+      <EventModal 
+      event={selectedEvent} 
+      onClose={() => handleToggleModal()}
+      registerUrl={selectedEvent?.registerUrl}
+      canVolunteer={selectedEvent?.canVolunteer}
+      volunteerUrl={selectedEvent?.volunteerUrl}
+      imageName={selectedEvent?.imageName}
+      isSoldOut={selectedEvent?.isSoldOut}
+      /> }
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
           <div className="md:hidden">
@@ -95,17 +118,20 @@ Location              </th>
             <tbody className="bg-white">
               {tableEvents?.map((event) => (
                 <tr
+                onClick={() => handleToggleModal(event)}
                   key={event.eventId}
-                  className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
+                  className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg hover:cursor-pointer hover:bg-sky-100 hover:text-blue-600"
                 >
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex items-center gap-3">
-                      <button onClick={() => handleToggleModal(event)}>{event.name}</button>
+                      {/* <button onClick={() => handleToggleModal(event)}>{event.name}</button> */}
+                      {event.name}
                     </div>
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    <Link href={event.locationUrl} className="hover:underline text-blue-600">
-                    {event.address}</Link>
+                    {/* <Link href={event.locationUrl} className="hover:underline text-blue-600"> */}
+                    {event.address}
+                    {/* </Link> */}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
                     {event.cost}

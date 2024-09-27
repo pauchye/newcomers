@@ -1,5 +1,5 @@
 import Link from 'next/link';
-// import NavLinks from '@/app/ui/dashboard/nav-links';
+import NavLinks from '@/app/ui/dashboard/nav-links';
 import AcmeLogo from '@/app/ui/wilton-logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
 // import { signOut } from '@/auth';
@@ -17,9 +17,9 @@ export default function SideNav() {
         </div>
       </Link>
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
-        {/* <NavLinks /> */}
+        <NavLinks />
         <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block">
-        <ul>
+        {/* <ul>
   <li>
   <b >Supporting Newcomers</b>
   <ul className="my-2">
@@ -88,7 +88,7 @@ export default function SideNav() {
 </li>
 </ul>
 </li>
-</ul>
+</ul> */}
         </div>
         {/* <form           action={async () => {
             // 'use server';

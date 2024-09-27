@@ -1,14 +1,27 @@
 'use client'
-import { Button, Modal } from "flowbite-react";
-
+import { Modal } from "flowbite-react";
+import Image from 'next/image';
 import Link from 'next/link';
+// import { boolean, string } from "zod";
 
 export function EventModal( {
     onClose,
-    event
+    event,
+    canRegister,
+    registerUrl='#',
+    canVolunteer,
+    volunteerUrl='#',
+    imageName,
+    isSoldOut,
 } : {
     onClose: any;
     event: any;
+    canRegister?: boolean;
+    registerUrl?: string;
+    canVolunteer?: boolean;
+    volunteerUrl?: string
+    imageName: string
+    isSoldOut: boolean;
 }
 
 ) {
@@ -37,18 +50,25 @@ export function EventModal( {
                 </div>
               </div>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              TBD
+              {event.description}
             </p>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-             TBD
+            { imageName && <Image
+        src={`/images/events/${imageName}.jpg`}
+        width={1000}
+        height={1000}
+        className="md:block rounded-lg"
+        alt="Screenshots of the dashboard project showing desktop version"
+      />}
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() =>console.log('reg')}>Register for the event</Button>
-          <Button onClick={() =>console.log('vol')}>
+         {canRegister &&  <Link className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base" href={registerUrl}>Register for the event</Link>}
+         {isSoldOut && <div>This event is sold out.</div>}
+         {canVolunteer &&  <Link className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base" href={volunteerUrl}>
 Volunteer for this event
-          </Button>
+          </Link>}
         </Modal.Footer>
       </Modal>
   );

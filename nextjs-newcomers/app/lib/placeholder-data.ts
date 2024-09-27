@@ -149,21 +149,26 @@ const revenue = [
 
 const events = [
   {
-    eventId: 0,
+    eventId: '0',
     date: '2024-09-21',
     timeStart: '11am',
     duration: 60, //minutes
     recurring: false,
     cost: 0,
-    regUrl: 'string',
     address: '137 Old Ridgefield Rd, Wilton, CT 06897',
     venueName: 'Wilton Library',
     locationUrl: 'https://g.co/kgs/tUkZ8Vs',
     name: 'Volunteer fair',
-    label: ['all'] // target audience
+    label: ['all'], // target audience
+    registerUrl: '#',
+    canVolunteer: true,
+    volunteerUrl: '#',
+    imageName: 'library',
+    isSoldOut: false,
+    description: undefined,
   },
   {
-    eventId: 1,
+    eventId: '1',
     date: '2024-09-28',
     time: '6pm',
     recurring: false,
@@ -173,12 +178,18 @@ const events = [
     venueName: 'browngrotta arts',
     locationUrl: 'https://maps.app.goo.gl/VrQGRyzRmRfXKdkf8',
     name: 'Revival Happy Hour',
-    label: ['21+'] // target audience
+    label: ['21+'], // target audience
+    registerUrl: '#',
+    canVolunteer: true,
+    volunteerUrl: '#',
+    imageName: 'happyhour',
+    isSoldOut: false,
+    description: undefined,
   },
   {
-    eventId: 2,
+    eventId: '2',
     date: '2024-10-11',
-    time: 'TBD',
+    time: '4pm',
     recurring: false,
     cost: 0,
     regUrl: 'string',
@@ -187,7 +198,13 @@ const events = [
     venueName: 'Wilton Library',
     locationUrl: 'https://g.co/kgs/tUkZ8Vs',
     name: 'Build a scarecrow',
-    label: ['kids'] // target audience
+    label: ['kids'], // target audience
+    registerUrl: '#',
+    canVolunteer: true,
+    volunteerUrl: '#',
+    imageName: 'scarecrow',
+    isSoldOut: false,
+    description: undefined,
   },
 ]
 
