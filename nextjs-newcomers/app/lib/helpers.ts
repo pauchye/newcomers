@@ -8,7 +8,7 @@ export const getGalleryImagesArray = () => {
     const GALLERY_MAP: Record<string, string[]> = {}
 
 galleryFilenames.forEach(item => {
-    const itemPath = path.join(process.cwd(), `./public/images/events/${item}`)
+    const itemPath = path.join(process.cwd(), `/public/images/events/${item}`)
     if (fs.lstatSync(itemPath).isDirectory() ) {
         GALLERY_MAP[item] = fs.readdirSync(itemPath)
     }
