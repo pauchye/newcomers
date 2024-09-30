@@ -1,7 +1,7 @@
 'use client'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { getGalleryImagesArray } from '../../lib/helpers'
+// import { getGalleryImagesArray } from '../../lib/helpers'
 
 const getImageArray = ({ eventName }: {eventName: string}) => {
     switch (eventName) {

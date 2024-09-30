@@ -1,21 +1,27 @@
 // import WiltonLogo from '@/app/ui/wilton-logo';
 'use client'
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import { useState } from 'react'
+// import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 // import styles from '@/app/ui/home.module.css';
 // import { poppins } from '@/app/ui/fonts';
 import Image from 'next/image';
 import CustomFooter from '@/app/ui/footer';
 import { PromoModal } from '@/app/ui/promoModal'
-// import { useRouter } from 'next/navigation';
 
 export default function Page() {
-  // const router = useRouter();
   const [ openPromo, setOpenPromo ] = useState(false)
-  //   useEffect(() => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/page2');
+  };
+
+  // useEffect(() => {
   //   router.push('/dashboard')
   // }, [])
+
   return (
     <main className="flex min-h-screen flex-col p-6">
 {openPromo && <PromoModal onClose={() => setOpenPromo(false)}/>}
@@ -69,17 +75,7 @@ export default function Page() {
             className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors  md:text-base hover:bg-blue-400"
           >
             <span>Check our next event! </span>
-          </div>
-          <div>
-                              <Link
-            // href="/login"
-            href="/dashboard"
-            className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-          >
-            <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
-          </div>
-          </div>
+          </div></div>
           <div>
           <b>browngrotta arts</b> is an internationally known gallery that promotes contemporary art textiles. In its art barn in Wilton, the gallery hosts two exhibitions each year that are open to the public just 10 days each. The gallery will be highlighting <b>Ways of Seeing</b>, how people envision and curate art collections.
           <br/>
@@ -90,13 +86,6 @@ Ways of Seeing is sponsored by <b>Litchfield Distillery</b>.
           </div>
         </div>
         <div className="flex flex-col gap-6 rounded-lg bg-gray-50 p-6 md:w-2/5 md:px-20">
-                  <Link
-            // href="/login"
-            href="/dashboard"
-            className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-          >
-            <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
         <b>
           Coming soon...
         </b>
@@ -213,7 +202,13 @@ Ways of Seeing is sponsored by <b>Litchfield Distillery</b>.
 
 </div>
           </div> */}
-
+          {/* <Link
+            // href="/login"
+            href="/dashboard"
+            className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
+          </Link> */}
         </div>
         {/* <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           <Image
