@@ -2,6 +2,8 @@
 import * as fs from 'fs'
 import path from 'path'
 
+
+// TODO: to fix - not working with vercel as expected
 export const getGalleryImagesArray = () => {
     const galDirectoryPath = path.resolve(process.cwd(), 'public', 'images', 'events');
     const galleryFilenames: string[] = fs.readdirSync(galDirectoryPath)
