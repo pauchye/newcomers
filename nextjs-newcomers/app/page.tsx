@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import CustomFooter from '@/app/ui/footer';
 import { PromoModal } from '@/app/ui/promoModal'
+import { Carousel } from "flowbite-react";
 // import { useRouter } from 'next/navigation';
 
 export default function Page() {
@@ -47,21 +48,32 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow justify-start items-start flex-col gap-4 md:flex-row">
       <div className="flex flex-col  justify-center items-center rounded-lg md:w-3/5 items-start md:px-28 ">
-          <Image
-        src="/images/eventSold.jpg"
-        width={1000}
-        height={1000}
-        className="md:block rounded-lg"
-        alt="Screenshots of the dashboard project showing desktop version"
-      />
+<div className="h-96 w-full">
+<Carousel slideInterval={6000} pauseOnHover>
+  <Image src="/images/events/happyhour/1.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/2.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/3.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/4.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/5.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/6.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/7.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/8.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/9.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/10.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/11.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/12.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/13.jpg" width={1000} height={1000}  alt="..." />
+  <Image src="/images/events/happyhour/14.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/15.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/16.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/17.jpg" width={1000} height={1000} alt="..." />
+
+</Carousel>
+</div>
+<div className='my-4'>
+  Happy Hour at <a href='https://browngrotta.com/exhibitions' className="hover:underline text-blue-600">browngrotta arts</a>. Pictures by <a href='https://www.instagram.com/cherryhe21/' className="hover:underline text-blue-600">Cherry He</a>
+</div>
       <div className='flex flex-col md:gap-4 md:flex-row'>
-                <div
-            // href="/login"
-            // href="/dashboard"
-            className="flex items-center gap-5 self-start rounded-lg bg-gray-300 px-6 my-4 py-3 text-sm font-medium text-white transition-colors  md:text-base"
-          >
-            <span>This event is sold out </span>
-          </div>
           <div
           onClick={() => setOpenPromo(true)}
             // href="/login"
@@ -79,14 +91,6 @@ export default function Page() {
             <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
           </div>
-          </div>
-          <div>
-          <b>browngrotta arts</b> is an internationally known gallery that promotes contemporary art textiles. In its art barn in Wilton, the gallery hosts two exhibitions each year that are open to the public just 10 days each. The gallery will be highlighting <b>Ways of Seeing</b>, how people envision and curate art collections.
-          <br/>
-<Link href='https://browngrotta.com/exhibitions' className="hover:underline text-blue-600 my-2">
-https://browngrotta.com/exhibitions </Link>   <br/>
-Ways of Seeing is sponsored by <b>Litchfield Distillery</b>.
-
           </div>
         </div>
         <div className="flex flex-col gap-6 rounded-lg bg-gray-50 p-6 md:w-2/5 md:px-20">
