@@ -95,7 +95,7 @@ export default function Page() {
           </div>
         </div>
         <div className="flex flex-col gap-6 rounded-lg bg-gray-50 p-6 md:w-2/5 md:px-20">
-         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeR0X3aPIdS51jLvfb-LtugsWHEeov84On43GJGL97K3KAo0g/viewform?embedded=true" width="380" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeR0X3aPIdS51jLvfb-LtugsWHEeov84On43GJGL97K3KAo0g/viewform?embedded=true" width="380" height="400" >Loading…</iframe>
                   {/* <Link
             // href="/login"
             href="/dashboard"
