@@ -7,7 +7,7 @@ import Link from 'next/link';
 // import { poppins } from '@/app/ui/fonts';
 import Image from 'next/image';
 import CustomFooter from '@/app/ui/footer';
-import { PromoModal } from '@/app/ui/promoModal'
+// import { PromoModal } from '@/app/ui/promoModal'
 import { Carousel } from "flowbite-react";
 // import { useRouter } from 'next/navigation';
 
@@ -19,7 +19,7 @@ export default function Page() {
   // }, [])
   return (
     <main className="flex min-h-screen flex-col p-6">
-{openPromo && <PromoModal onClose={() => setOpenPromo(false)}/>}
+{/* {openPromo && <PromoModal onClose={() => setOpenPromo(false)}/>} */}
       <div className="flex h-20 rounded-lg bg-wiltonBlue-100 p-4 md:h-52 flex flex-col gap-4 md:flex-row">
         {/* <WiltonLogo /> */}
         <div 
@@ -39,6 +39,7 @@ export default function Page() {
           </div>
       </div>
       <div className=" rounded-lg bg-gray-50 p-6 mt-4">
+       
             <p >
              <b>Wiltonians, Newcomers and Neighbors</b> is a social club open to all residents of Wilton, CT. 
 
@@ -74,14 +75,14 @@ export default function Page() {
   Happy Hour at <a href='https://browngrotta.com/exhibitions' className="hover:underline text-blue-600">browngrotta arts</a>. Pictures by <a href='https://www.instagram.com/cherryhe21/' className="hover:underline text-blue-600">Cherry He</a>
 </div>
       <div className='flex flex-col md:gap-4 md:flex-row'>
-          <div
+          {/* <div
           onClick={() => setOpenPromo(true)}
             // href="/login"
             // href="/dashboard"
             className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors  md:text-base hover:bg-blue-400"
           >
             <span>Check our next event! </span>
-          </div>
+          </div> */}
           <div>
                               <Link
             // href="/login"
@@ -94,13 +95,14 @@ export default function Page() {
           </div>
         </div>
         <div className="flex flex-col gap-6 rounded-lg bg-gray-50 p-6 md:w-2/5 md:px-20">
-                  <Link
+         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeR0X3aPIdS51jLvfb-LtugsWHEeov84On43GJGL97K3KAo0g/viewform?embedded=true" width="380" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                  {/* <Link
             // href="/login"
             href="/dashboard"
             className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
             <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+          </Link> */}
         <b>
           Coming soon...
         </b>

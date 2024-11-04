@@ -4,7 +4,8 @@ import {
   UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
-  MapPinIcon
+  SunIcon
+  // MapPinIcon
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -24,11 +25,16 @@ const links = [
     href: '/dashboard/pastevents',
     icon: DocumentDuplicateIcon,
   },
-  {
-    name: 'Halloween map',
-    href: '/dashboard/eventmap',
-    icon: MapPinIcon,
+    {
+    name: 'Business/ Nonprofit Spotlight',
+    href: '/dashboard/spotlight',
+    icon: SunIcon,
   },
+  // {
+  //   name: 'Halloween map',
+  //   href: '/dashboard/eventmap',
+  //   icon: MapPinIcon,
+  // },
   // { name: 'People', href: '/dashboard/users', icon: UserGroupIcon },
 ];
 

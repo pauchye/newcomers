@@ -8,7 +8,7 @@ export default async function Page() {
     <main className="h-full ">
         <Slider />
         <div className="absolute bottom-0 right-0 m-4 p-4">
-      <Link className="flex items-center gap-5 rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base" href='https://docs.google.com/forms/d/e/1FAIpQLSchDZn7vOO1F84MMZCPnkLa04w_0_S5EwuGZwHZV98I35hFGg/viewform'>
+      <Link className="flex items-center gap-5 rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base" href='https://docs.google.com/forms/d/e/1FAIpQLSeR0X3aPIdS51jLvfb-LtugsWHEeov84On43GJGL97K3KAo0g/viewform?usp=sf_link'>
         Get in touch
       </Link></div>
     </main>
