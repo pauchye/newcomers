@@ -206,6 +206,26 @@ const events = [
     isSoldOut: false,
     description: undefined,
   },
+    {
+    eventId: '3',
+    date: '2024-12-19',
+    time: '5:30pm',
+    recurring: false,
+    cost: 30,
+    regUrl: 'string',
+    volunteerId: 0,
+    address: '644 Danbury Rd, Wilton, CT 06897',
+    venueName: 'The Play Place Wilton',
+    locationUrl: 'https://maps.app.goo.gl/i9bduu1ReaAUC9b86',
+    name: 'Family fun night',
+    label: ['kids'], // target audience
+    registerUrl: '#',
+    canVolunteer: false,
+    volunteerUrl: '#',
+    imageName: 'familyfun1',
+    isSoldOut: false,
+    description: undefined,
+  },
 ]
 
 const volunteering = [
