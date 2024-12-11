@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import CustomFooter from '@/app/ui/footer';
 // import { PromoModal } from '@/app/ui/promoModal'
-import { Carousel } from "flowbite-react";
+// import { Carousel } from "flowbite-react";
 // import { useRouter } from 'next/navigation';
 
 export default function Page() {
