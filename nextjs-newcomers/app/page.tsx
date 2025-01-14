@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import CustomFooter from '@/app/ui/footer';
 // import { PromoModal } from '@/app/ui/promoModal'
-// import { Carousel } from "flowbite-react";
+import { Carousel } from "flowbite-react";
 // import { useRouter } from 'next/navigation';
 
 export default function Page() {
@@ -49,7 +49,7 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow justify-start items-start flex-col gap-4 md:flex-row">
       <div className="flex flex-col  justify-center items-center rounded-lg md:w-3/5 items-start md:px-28 ">
-{/* <div className="h-96 w-full">
+<div className="h-96 w-full">
 <Carousel slideInterval={6000} pauseOnHover>
   <Image src="/images/events/happyhour/1.jpg" width={1000} height={1000} alt="..." />
   <Image src="/images/events/happyhour/2.jpg" width={1000} height={1000} alt="..." />
@@ -70,22 +70,22 @@ export default function Page() {
   <Image src="/images/events/happyhour/17.jpg" width={1000} height={1000} alt="..." />
 
 </Carousel>
-</div> */}
-          <Image
+</div>
+          {/* <Image
         src="/images/familyfun1.jpg"
         width={1000}
         height={1000}
         className="md:block rounded-lg"
         alt="Screenshots of the dashboard project showing desktop version"
-      />
-                <Link
+      /> */}
+                {/* <Link
             // href="/login"
             // href="/dashboard"
             href="https://docs.google.com/forms/d/e/1FAIpQLSewwL8pf7vBJCkSZ1nSHaX7muPDGM-m9RCFtI2yQajnBFmbxQ/viewform"
             className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
             <span>RSVP </span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+          </Link> */}
 {/* <div className='my-4'>
   Happy Hour at <a href='https://browngrotta.com/exhibitions' className="hover:underline text-blue-600">browngrotta arts</a>. Pictures by <a href='https://www.instagram.com/cherryhe21/' className="hover:underline text-blue-600">Cherry He</a>
 </div> */}
@@ -99,13 +99,13 @@ export default function Page() {
             <span>Check our next event! </span>
           </div> */}
           <div>
-                              {/* <Link
+                              <Link
             // href="/login"
             href="/dashboard"
             className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
             <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link> */}
+          </Link>
           </div>
           </div>
         </div>
@@ -118,13 +118,13 @@ export default function Page() {
           >
             <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link> */}
-                                        <Link
+                                        {/* <Link
             // href="/login"
             href="/dashboard"
             className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
             <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+          </Link> */}
         <b>
           Coming soon...
         </b>
