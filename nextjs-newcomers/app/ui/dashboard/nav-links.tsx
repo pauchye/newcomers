@@ -4,7 +4,8 @@ import {
   UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
-  SunIcon
+  SunIcon,
+  CalendarDaysIcon
   // MapPinIcon
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -15,6 +16,11 @@ import clsx from 'clsx';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
+    {
+    name: 'Calendar',
+    href: '/dashboard/calendar',
+    icon: CalendarDaysIcon,
+  },
   {
     name: 'Events',
     href: '/dashboard/events',
