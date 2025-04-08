@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useRef, useState } from "react";
 import { Modal } from "flowbite-react";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,6 +26,14 @@ export function EventModal( {
 }
 
 ) {
+const [refVisible, setRefVisible] = useState(false)
+const descriptionRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (event && event.description && refVisible) {
+         descriptionRef.current!.innerHTML = event.description
+    }
+  }, [event, refVisible])
 
   return (
       <Modal dismissible show={true} onClose={onClose}>
@@ -38,20 +47,26 @@ export function EventModal( {
                 <div className="flex items-center justify-between border-b pb-4">
                   <div>
                     <p className="text-sm text-gray-500">{`Cost: $${event.cost}`}</p>
+                    
                   </div>
                 </div>
-                <div className="flex w-full items-center justify-between pt-4">
+                <div className="flex w-full items-center justify-between pt-4 pb-4">
                   <div>
                     <p className="mb-2">
                     {`${event.date} at ${event.time}`}
                     </p>
-                    <Link className='hover:underline text-blue-600' href={event.locationUrl}>{event.address}</Link>
+                   {event.locationUrl &&  <Link className='hover:underline text-blue-600' href={event.locationUrl}>{event.address}</Link> }
+                   {!event.locationUrl &&  <div>{event.address}</div> }
                   </div>
                 </div>
+                {event.registerUrl && 
+                <div className="flex w-full items-center border-t justify-between pt-4">
+                  <div>
+                    <Link className='hover:underline text-blue-600 font-bold' href={event.registerUrl}>Please, register here</Link>
+                  </div>
+                </div>}
               </div>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              {event.description}
-            </p>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400" ref={el => { descriptionRef.current = el; setRefVisible(!!el); }} />
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
             { imageName && <Image
         src={`/images/events/${imageName}.jpg`}
