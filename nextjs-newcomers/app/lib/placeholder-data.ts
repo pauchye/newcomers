@@ -248,7 +248,7 @@ const events = [
   },
         {
     eventId: '5',
-    date: '2025-05-11',
+    date: '2025-05-10',
     time: '10:00am',
     recurring: false,
     cost: 0,
