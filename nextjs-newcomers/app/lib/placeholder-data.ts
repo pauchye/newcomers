@@ -262,9 +262,9 @@ const events = [
     registerUrl: 'https://forms.gle/Anoq9B5PvGn1XEBZ8',
     canVolunteer: false,
     volunteerUrl: '#',
-    imageName: '',
+    imageName: 'firefighters',
     isSoldOut: false,
-    description: `Join the Wiltonians, Newcomers & Neighbors for an exciting visit to our local firehouse! We’ll meet our hometown heroes and learn all about their jobs, the gear, and of course – their trucks!  <br/> Adults and Kids of all ages (with proper supervision) <br/> Free to register, maximum of 15 families`,
+    description: `Join the Wiltonians, Newcomers & Neighbors for an exciting visit to our local firehouse! We’ll meet our hometown heroes and learn all about their jobs, the gear, and of course – their trucks!  Adults and Kids of all ages (with proper supervision) Free to register, maximum of 15 families`,
   },
           {
     eventId: '6',

@@ -38,6 +38,13 @@ const getImageArray = ({ eventName }: {eventName: string}) => {
                 <Image  width={400} height={400} alt={'alt'} src={`/images/events/happyhour/16.jpg`} key={15} />,
                 <Image  width={400} height={400} alt={'alt'} src={`/images/events/happyhour/17.jpg`} key={16} />,
             ]
+        case 'firefighters':
+            return [
+                <Image  width={400} height={400} alt={'alt'} src={`/images/events/firefighters/1.jpg`} key={0} />,
+                <Image  width={400} height={400} alt={'alt'} src={`/images/events/firefighters/2.jpg`} key={1} />,
+                <Image  width={400} height={400} alt={'alt'} src={`/images/events/firefighters/3.jpg`} key={2} />,
+                <Image  width={400} height={400} alt={'alt'} src={`/images/events/firefighters/4.jpg`} key={3} />,
+            ]
         default:
             break;
     }

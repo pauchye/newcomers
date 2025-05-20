@@ -55,8 +55,6 @@ export default function Page() {
 
 <div className=" flex flex-col gap-6 rounded-lg bg-gray-50 p-6 mb-4 w-full">
              <b>SIGN UP LINKS FOR EVENTS HERE:</b>
-             <Link href='https://forms.gle/rrZom7TNgVz23Xz1A' className='hover:underline text-blue-600'>Sly Bandit Brewing Happy Hour 4.19.25</Link>
-             <Link href='https://forms.gle/Anoq9B5PvGn1XEBZ8' className='hover:underline text-blue-600'>Meet our Hometown Heroes 5.10.25</Link>
              <Link href='https://forms.gle/wz7NaBAeawzKhPLE6' className='hover:underline text-blue-600'>Summer Solstice Supper Club 6.21.25 (registration closes 6.1.25)</Link>
              <Link href='https://forms.gle/ppSXTc8ZuWwwZFMc8' className='hover:underline text-blue-600'>Popsicles in the Park 7.5.25</Link>
      </div>
