@@ -38,20 +38,7 @@ export default function Page() {
     </div>
           </div>
       </div>
-      {/* <div className=" rounded-lg bg-gray-50 p-6 mt-4 md:w-2/5 md:px-20">
-       
-            <p >
-             <b>Wiltonians, Newcomers and Neighbors</b> is a social club open to all residents of Wilton, CT. 
-
-             The group is in the process of reviving the club and registering as an official organization with events and dues. 
-             If you are interested in helping us grow please reach out!
-            </p>
-            <p className='mt-4'>Our mission is to foster meaningful, symbiotic relationships that connect individuals, organizations, and local businesses, creating a stronger, more united Wilton community. We are dedicated to bridging generational gaps by building relationships between seasoned Wiltonians and newcomers, ensuring that the rich legacy of those who have shaped our town is preserved, shared, and carried forward by the next generation. Through inclusive social gatherings, community support, and partnerships, we aim to create a space where all can thrive together, learn from one another, and contribute to Wilton’s continued growth and success.</p>
-      </div> */}
-
-      <div className="mt-4 flex grow justify-center items-center flex-col gap-4 md:flex-col">
-        
-        <div className=" rounded-lg bg-gray-50 p-6 mt-4 md:w-2/5 md:px-20">
+      <div className=" rounded-lg bg-gray-50 p-6 mt-4">
        
             <p >
              <b>Wiltonians, Newcomers and Neighbors</b> is a social club open to all residents of Wilton, CT. 
@@ -61,7 +48,61 @@ export default function Page() {
             </p>
             <p className='mt-4'>Our mission is to foster meaningful, symbiotic relationships that connect individuals, organizations, and local businesses, creating a stronger, more united Wilton community. We are dedicated to bridging generational gaps by building relationships between seasoned Wiltonians and newcomers, ensuring that the rich legacy of those who have shaped our town is preserved, shared, and carried forward by the next generation. Through inclusive social gatherings, community support, and partnerships, we aim to create a space where all can thrive together, learn from one another, and contribute to Wilton’s continued growth and success.</p>
       </div>
+
+      <div className="mt-4 flex grow justify-start items-start flex-col gap-4 md:flex-row">
+        
+      <div className="flex flex-col  justify-center items-center rounded-lg md:w-3/5 items-start md:px-28 ">
+
+{/* <div className=" flex flex-col gap-6 rounded-lg bg-gray-50 p-6 mb-4 w-full">
+             <b>SIGN UP LINKS FOR EVENTS HERE:</b>
+             <Link href='https://forms.gle/wz7NaBAeawzKhPLE6' className='hover:underline text-blue-600'>Summer Solstice Supper Club 6.21.25 (registration closes 6.1.25)</Link>
+             <Link href='https://forms.gle/ppSXTc8ZuWwwZFMc8' className='hover:underline text-blue-600'>Popsicles in the Park 7.5.25</Link>
+     </div> */}
+<div className="md:h-96 invisible md:visible w-full">
+{/* <Carousel slideInterval={6000} pauseOnHover>
+  <Image src="/images/events/happyhour/1.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/2.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/3.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/4.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/5.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/6.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/7.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/8.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/9.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/10.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/11.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/12.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/13.jpg" width={1000} height={1000}  alt="..." />
+  <Image src="/images/events/happyhour/14.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/15.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/16.jpg" width={1000} height={1000} alt="..." />
+  <Image src="/images/events/happyhour/17.jpg" width={1000} height={1000} alt="..." />
+
+</Carousel> */}
+</div>
+      {/* <div className='flex flex-col md:gap-4 md:flex-row'>
+          <Link
+            href="/dashboard"
+            className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <span>Go to dashboard</span> <ArrowRightIcon className="w-5 md:w-6" />
+          </Link>
+           <Link
+            href="/dashboard/events"
+            className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <span>Upcoming events! </span> <ArrowRightIcon className="w-5 md:w-6" />
+          </Link>
+          <Link
+            href="https://forms.gle/wz7NaBAeawzKhPLE6"
+            className="flex items-center gap-5 self-start rounded-lg bg-wiltonBlue-100 px-6 my-4 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <span>Supper club registration! </span> <ArrowRightIcon className="w-5 md:w-6" />
+          </Link>
+          </div> */}
+        </div>
         <div className="flex flex-col gap-6 rounded-lg bg-gray-50 p-6 md:w-2/5 md:px-20">
+         {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeR0X3aPIdS51jLvfb-LtugsWHEeov84On43GJGL97K3KAo0g/viewform?embedded=true" height="400" className="w-[300px] md:w-[380px]">Loading…</iframe> */}
         <b>
           Coming soon...
         </b>
