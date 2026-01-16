@@ -1,15 +1,6 @@
 // import WiltonLogo from '@/app/ui/wilton-logo';
 'use client'
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-// import { useState } from 'react'
-import Link from 'next/link';
-// import styles from '@/app/ui/home.module.css';
-// import { poppins } from '@/app/ui/fonts';
 import Image from 'next/image';
-import CustomFooter from '@/app/ui/footer';
-// import { PromoModal } from '@/app/ui/promoModal'
-import { Carousel } from "flowbite-react";
-// import { useRouter } from 'next/navigation';
 
 export default function Page() {
   // const router = useRouter();
